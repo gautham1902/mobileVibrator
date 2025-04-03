@@ -141,7 +141,20 @@ private fun vibrateDevice(context: Context) {
     }
 
 
-    vibrator.vibrate(  VibrationEffect.createOneShot(1000, 255))
+    val tim = longArrayOf(0L, 750L, 100L, 750L, 100L, 750L, 100L, 750L,100L, 750L,
+        0L, 750L, 100L, 750L, 100L, 750L, 100L, 750L,100L, 750L,
+        0L, 750L, 100L, 750L, 100L, 750L, 100L, 750L,100L, 750L,
+        0L, 750L, 100L, 750L, 100L, 750L, 100L, 750L,100L, 750L)
+    val amp = intArrayOf(0, 255, 0, 255, 0, 255, 0, 255 , 0, 255,
+        0, 255, 0, 255, 0, 255, 0, 255 , 0, 255,
+        0, 255, 0, 255, 0, 255, 0, 255 , 0, 255,
+        0, 255, 0, 255, 0, 255, 0, 255 , 0, 255)
+
+    vibrator.vibrate(VibrationEffect.createWaveform(tim, amp, -1))
+
+    //vibrator.vibrate(  VibrationEffect.createOneShot(1000, 255))
+
+    //vibrator.vibrate(  VibrationEffect.createWaveform(tim, -1))
 
     //val tim = longArrayOf(1000L, 500L, 1000L, 500L)
     //val amp = intArrayOf(70,60,70,60)
