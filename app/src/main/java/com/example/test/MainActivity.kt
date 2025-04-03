@@ -150,7 +150,7 @@ private fun vibrateDevice(context: Context) {
         0, 255, 0, 255, 0, 255, 0, 255 , 0, 255,
         0, 255, 0, 255, 0, 255, 0, 255 , 0, 255)
 
-    vibrator.vibrate(VibrationEffect.createWaveform(tim, amp, -1))
+    vibrator.vibrate(VibrationEffect.createWaveform(tim, amp, 3))
 
     //vibrator.vibrate(  VibrationEffect.createOneShot(1000, 255))
 
